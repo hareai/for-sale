@@ -6,6 +6,10 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versio
 
 ## [Unreleased]
 
+### Changed
+
+- README one-liner no longer uses the word “landing”.
+
 ## [0.1.0] - 2026-09-12
 
 ### Added

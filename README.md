@@ -1,6 +1,6 @@
 # for-sale
 
-A static landing page that says a domain is for sale.
+A static page that says a domain is for sale.
 
 [简体中文](README.zh-CN.md)
 

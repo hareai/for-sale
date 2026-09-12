@@ -11,7 +11,7 @@ Binding for agents in this repository.
 
 ## During editing
 
-- Keep the landing to: hostname, one Chinese sentence, one English sentence, contact email.
+- Keep the page to: hostname, one Chinese sentence, one English sentence, contact email.
 - White background. No extra labels, status chips, or decoration.
 - Contact email lives in `site/index.html`.
 
