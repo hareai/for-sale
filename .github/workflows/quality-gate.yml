@@ -1,0 +1,19 @@
+name: quality-gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  html:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: landing exists
+        run: test -f site/index.html
+      - name: contact and copy
+        run: |
+          grep -q 'domains@lifeng.net' site/index.html
+          grep -q 'This domain is for sale' site/index.html
+          grep -q '本域名正在出售' site/index.html
