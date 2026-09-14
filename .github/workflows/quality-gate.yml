@@ -17,3 +17,4 @@ jobs:
           grep -q 'domains@hareai.dev' site/index.html
           grep -q 'This domain is for sale' site/index.html
           grep -q '本域名正在出售' site/index.html
+          if grep -q 'domains@lifeng.net' site/index.html; then exit 1; fi
