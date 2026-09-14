@@ -4,30 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Sale</title>
-<meta name="description" content="This domain is for sale. Contact domains@lifeng.net">
+<meta name="description" content="This domain is for sale. Contact domains@hareai.dev">
 <style>
-body{margin:0;background:#fff;color:#111;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center;}
-.page{padding:2rem;}
-h1{font-size:clamp(2.5rem,8vw,6rem);margin:0 0 1.5rem;letter-spacing:-0.02em;word-break:break-word;}
-p{font-size:clamp(1rem,2.2vw,1.3rem);line-height:1.7;margin:0.5rem 0;}
-a{color:#111;}
+:root {
+  --c-bg: #ffffff;
+  --c-ink: #111111;
+  --c-copy: #2c2c2c;
+  --c-focus: #111111;
+  --fs-host: clamp(2.6rem, 8.5vw, 5.25rem);
+  --fs-copy: clamp(1.05rem, 2vw, 1.2rem);
+  --fw-host: 650;
+  --fw-copy: 400;
+  --lh-host: 1.05;
+  --lh-copy: 1.7;
+  --ls-host: -0.035em;
+  --gap-block: clamp(1.75rem, 4vw, 2.5rem);
+  --gap-copy: 0.45rem;
+  --pad-page: clamp(1.5rem, 6vw, 3rem);
+  --measure-host: min(100%, 52rem);
+  --measure-copy: 36rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--c-bg);
+  color: var(--c-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: var(--c-ink);
+  color: var(--c-bg);
+}
+.page {
+  width: min(100%, var(--measure-host));
+  padding: var(--pad-page);
+  text-align: center;
+}
+h1 {
+  margin: 0 0 var(--gap-block);
+  color: var(--c-ink);
+  font-size: var(--fs-host);
+  font-weight: var(--fw-host);
+  line-height: var(--lh-host);
+  letter-spacing: var(--ls-host);
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+.copy {
+  display: grid;
+  gap: var(--gap-copy);
+  width: min(100%, var(--measure-copy));
+  margin-inline: auto;
+}
+p {
+  margin: 0;
+  color: var(--c-copy);
+  font-size: var(--fs-copy);
+  font-weight: var(--fw-copy);
+  line-height: var(--lh-copy);
+  text-wrap: pretty;
+}
+a {
+  color: var(--c-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: currentColor;
+}
+a:hover {
+  text-decoration-thickness: 2px;
+}
+a:active {
+  opacity: 0.72;
+}
+a:focus,
+a:focus-visible {
+  outline: 2px solid var(--c-focus);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  a:hover { text-decoration-thickness: 1px; }
+}
 </style>
 </head>
 <body>
-<div class="page">
+<main class="page">
   <h1 id="domain">this domain</h1>
-  <p>本域名正在出售，购买请联系 <a href="mailto:domains@lifeng.net">domains@lifeng.net</a></p>
-  <p>This domain is for sale. Contact <a href="mailto:domains@lifeng.net">domains@lifeng.net</a></p>
-</div>
+  <div class="copy">
+    <p>本域名正在出售，购买请联系 <a href="mailto:domains@hareai.dev">domains@hareai.dev</a></p>
+    <p>This domain is for sale. Contact <a href="mailto:domains@hareai.dev">domains@hareai.dev</a></p>
+  </div>
+</main>
 <script>
 (function () {
   var host = location.hostname.replace(/^www\./, "");
   if (!host) return;
   document.title = host + " \u2014 For Sale";
   var el = document.getElementById("domain");
-  if (el) el.textContent = host;
+  if (el) {
+    el.replaceChildren();
+    var labels = host.split(".");
+    for (var i = 0; i < labels.length; i++) {
+      if (i) {
+        el.appendChild(document.createTextNode("."));
+        el.appendChild(document.createElement("wbr"));
+      }
+      el.appendChild(document.createTextNode(labels[i]));
+    }
+  }
   var meta = document.querySelector('meta[name="description"]');
-  if (meta) meta.setAttribute("content", host + " is for sale. Contact domains@lifeng.net");
+  if (meta) meta.setAttribute("content", host + " is for sale. Contact domains@hareai.dev");
 })();
 </script>
 </body>

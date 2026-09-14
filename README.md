@@ -16,7 +16,7 @@ Open `http://127.0.0.1:8080`. The heading is the hostname that served the page.
 
 ## Usage
 
-Point a domain at the Cloudflare Pages project for this repo. The page shows that hostname and [domains@lifeng.net](mailto:domains@lifeng.net).
+Point a domain at the Cloudflare Pages project for this repo. The page shows that hostname and [domains@hareai.dev](mailto:domains@hareai.dev).
 
 To change the contact address, edit `site/index.html`.
 

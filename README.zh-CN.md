@@ -16,7 +16,7 @@ python3 -m http.server 8080 --directory site
 
 ## 用法
 
-把域名指到本仓库的 Cloudflare Pages 项目。页面会显示该主机名，联系邮箱是 [domains@lifeng.net](mailto:domains@lifeng.net)。
+把域名指到本仓库的 Cloudflare Pages 项目。页面会显示该主机名，联系邮箱是 [domains@hareai.dev](mailto:domains@hareai.dev)。
 
 要改联系邮箱，编辑 `site/index.html`。
 

@@ -8,6 +8,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versio
 
 ### Changed
 
+- Contact address is `domains@hareai.dev`.
+- Sale page type and spacing use tokens; white paper, no extra chrome.
 - README one-liner no longer uses the word “landing”.
 
 ## [0.1.0] - 2026-09-12
